@@ -1,0 +1,24 @@
+<head>
+  {% if page.title %}
+    <title>{{ page.title }}</title>
+  {% else %}
+    <title>HopHop Webdesign - websites voor kleine ondernemingen</title>
+  {% endif %}
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+  {% else %}
+    <meta name="description" content="Ik ben Julia Hop - de eigenaar van HopHop Webdesign. Ik maak betaalbare moderne websites voor kleine ondernemingen en zzp’ers. Je kunt bij mij terecht voor een grafisch concept, front-end ontwikkeling en/of contentadvies. Zie hier mijn portfolio en lees meer over mij en mijn bedrijf.">
+  {% endif %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="HopHop Webdesign - websites voor kleine ondernemingen" />
+  <meta property="og:description" content="Ik ben Julia Hop - de eigenaar van HopHop Webdesign. Ik maak betaalbare moderne websites voor kleine ondernemingen en zzp’ers." />
+  <link rel="icon" href="/favicon.png">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+  <link rel="stylesheet" href="/fonts/fontawesome-free-5.2.0-web/css/all.min.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
