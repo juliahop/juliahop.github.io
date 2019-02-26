@@ -1,4 +1,12 @@
-<header>
+<header class="header">
+
+  <div class="logo">
+    <a href="#page-top"> <!-- body id! -->
+      <div class="screen-reader-text">HopHop Webdesign</div>
+      <img class="image-responsive" alt="HopHop Webdesign" src="img/brand.png">
+    </a>
+  </div>
+
   <a href="#main-menu"
      id="main-menu-toggle"
      class="menu-toggle"
@@ -17,7 +25,7 @@
       <i class="fas fa-close" aria-hidden="true"></i>
     </a>
 
-    <ul>
+    <ul class="header-nav nav-links">
       {% include nav-links.html %}
     </ul>
   </nav>
