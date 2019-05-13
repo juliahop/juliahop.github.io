@@ -11,7 +11,7 @@
 }
 
 /* BUTTON STYLING */
-.menu-toggle {
+.mobile-menu-toggle {
   color: #333;
   display: inline-block;
   font-size: 1em;
@@ -19,13 +19,13 @@
   padding: .75em 15px;
 }
 
-.menu-toggle:hover,
-.menu-toggle:focus {
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:focus {
   color: #c00;
 }
 
 /* DEFAULT STYLES + MOBILE FIRST OFFSCREEN MENU STYLE */
-.main-menu {
+.main-nav {
   display: none;
   height: 100%;
   left: -200px;
@@ -38,7 +38,7 @@
   z-index: 999;
 }
 
-.main-menu ul {
+.main-nav ul {
   background: #1a1a1a;
   /* Hide shadow w/ -8px while 'closed' */
   -webkit-box-shadow: -8px 0 8px rgba(0,0,0,.5);
@@ -51,7 +51,7 @@
   width: 200px;
 }
 
-.main-menu a {
+.main-nav a {
   border-bottom: 1px solid #383838;
   color: #fff;
   display: block;
@@ -61,17 +61,17 @@
   text-decoration: none;
 }
 
-.main-menu li:first-child a {
+.main-nav li:first-child a {
   border-top: 1px solid #383838;
 }
 
-.main-menu a:hover,
-.main-menu a:focus {
+.main-nav a:hover,
+.main-nav a:focus {
   background: #333;
   text-decoration: underline;
 }
 
-.main-menu .menu-close {
+.main-nav .menu-close {
   position: absolute;
   right: 0;
   top: 0;
@@ -80,8 +80,8 @@
 /* ON SMALL DEVICES, ALLOW TO TOGGLE... */
 /* :TARGET FOR NON-JS */
 /* [ARIA-EXPANDED] WILL BE USED IF/WHEN JS IS ADDED TO IMPROVE INTERACTION, OPTIONAL */
-.main-menu:target,
-.main-menu[aria-expanded="true"] {
+.main-nav:target,
+.main-nav[aria-expanded="true"] {
   -moz-box-shadow: 3px 0 12px rgba(0,0,0,.25);
   -webkit-box-shadow: 3px 0 12px rgba(0,0,0,.25);
   box-shadow: 3px 0 12px rgba(0,0,0,.25);
@@ -91,23 +91,23 @@
 
 }
 
-.main-menu:target .manu-close,
-.main-menu[aria-expanded="true"] .menu-close {
+.main-nav:target .manu-close,
+.main-nav[aria-expanded="true"] .menu-close {
   z-index: 1001;
 }
 
-.main-menu:target ul,
-.main-menu[aria-expanded="true"] ul {
+.main-nav:target ul,
+.main-nav[aria-expanded="true"] ul {
   position: relative;
   z-index: 1000;
 }
 
 /*
- We could us `.main-menu:target:after`, but
+ We could us `.main-nav:target:after`, but
  it wouldn't be clickable.
 */
-.main-menu:target + .backdrop,
-.main-menu[aria-expanded="true"] + .backdrop{
+.main-nav:target + .backdrop,
+.main-nav[aria-expanded="true"] + .backdrop{
   background: #000;
   background: rgba(0,0,0,.85);
   cursor: default;
@@ -121,9 +121,9 @@
 }
 
 @supports (position: fixed) {
-  .main-menu,
-  .main-menu:target + .backdrop,
-  .main-menu[aria-expanded="true"] + .backdrop{
+  .main-nav,
+  .main-nav:target + .backdrop,
+  .main-nav[aria-expanded="true"] + .backdrop{
     position: fixed;
   }
 }
@@ -133,13 +133,13 @@
  Horizontal menu
 */
 @media (min-width: 768px) {
-  .menu-toggle,
-  .main-menu .menu-close {
+  .mobile-menu-toggle,
+  .main-nav .menu-close {
     display: none;
   }
 
   /* Undo positioning of off-canvas menu */
-  .main-menu {
+  .main-nav {
     display: block;
     height: auto;
 		left: auto;
@@ -147,7 +147,7 @@
     top: auto;
   }
 
-  .main-menu ul {
+  .main-nav ul {
     /* Undo off-canvas styling */
     -webkit-box-shadow: none;
        -moz-box-shadow: none;
@@ -159,13 +159,13 @@
     width: auto;
   }
 
-  .main-menu a {
+  .main-nav a {
     border: 0 !important; /* Remove borders from off-canvas styling */
     color: #06c;
   }
 
-  .main-menu a:hover,
-  .main-menu a:focus {
+  .main-nav a:hover,
+  .main-nav a:focus {
     background: none; /* Remove background from off-canvas styling */
     color: #c00;
   }
