@@ -71,7 +71,7 @@
   text-decoration: underline;
 }
 
-.main-nav .menu-close {
+.main-nav .mobile-menu-close {
   position: absolute;
   right: 0;
   top: 0;
@@ -92,7 +92,7 @@
 }
 
 .main-nav:target .manu-close,
-.main-nav[aria-expanded="true"] .menu-close {
+.main-nav[aria-expanded="true"] .mobile-menu-close {
   z-index: 1001;
 }
 
@@ -134,7 +134,7 @@
 */
 @media (min-width: 768px) {
   .mobile-menu-toggle,
-  .main-nav .menu-close {
+  .main-nav .mobile-menu-close {
     display: none;
   }
 
