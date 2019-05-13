@@ -18,8 +18,8 @@ title: HopHop Webdesign - websites voor kleine ondernemingen
 email: hophopjulia@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Ik ben Julia Hop - de eigenaar van HopHop Webdesign. Ik maak betaalbare moderne websites voor kleine ondernemingen en zzp’ers. Je kunt bij mij terecht voor een grafisch concept, front-end ontwikkeling en/of contentadvies. Zie hier mijn portfolio en lees meer over mij en mijn bedrijf.
-baseurl: ""
-url: "//localhost:4000"
+# baseurl: ""
+# url: "//localhost:4000"
 github_username: juliahop
 # BUILD SETTINGS
 sass:
