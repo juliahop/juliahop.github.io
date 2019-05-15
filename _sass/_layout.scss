@@ -1,3 +1,9 @@
+/* HEADER STYLES */
+.header {
+  background-color: var(--black);
+  color: var(--white);
+}
+
 /* MOBILE MENU */
 
 /* SCREEN READER ONLY */
@@ -163,7 +169,7 @@
 
   .main-nav a {
     border: 0 !important; /* Remove borders from off-canvas styling */
-    color: #06c;
+    // color: #06c;
   }
 
   .main-nav a:hover,
