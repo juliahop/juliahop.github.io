@@ -1,0 +1,26 @@
+<!-- Navigation -->
+<header class="site-header">
+  <!-- Brand and toggle get grouped for better mobile display Bootstrap -->
+        <div class="wrapper js-page-scrol">
+
+          <div class="logo logo--white">
+            <a href="#page-top"> <!-- body id! -->
+              <div class="sr-only">Logo HopHop Webdesign</div>
+              <img class="logo__img" alt="HopHop Webdesign" src="img/brand.png">
+            </a>
+          </div>
+
+          <nav class="menu">
+            <div class="menu__button" aria-label="Open hoofdmenu">
+              <span class="sr-only">Open hoofdmenu</span>
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </div>
+
+            <ul class="menu__items">
+              {% include nav-links.html %}
+            </ul>
+          </nav>
+
+        </div>
+
+  </header>
