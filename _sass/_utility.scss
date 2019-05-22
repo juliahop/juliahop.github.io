@@ -1,0 +1,16 @@
+/* SCREEN READER ONLY */
+.sr-only {
+  border: 0;
+  clip: rect(0,0,0,0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+}
+
+// Bootstrap https://getbootstrap.com/docs/3.4/css/#helper-classes
+.show      { display: block !important; }
+.hidden    { display: none !important; }
+.invisible { visibility: hidden; }
