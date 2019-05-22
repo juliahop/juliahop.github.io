@@ -1,0 +1,7 @@
+// Use on headings and menu__item
+
+@mixin heading {
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
