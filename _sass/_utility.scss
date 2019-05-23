@@ -14,3 +14,11 @@
 .show      { display: block !important; }
 .hidden    { display: none !important; }
 .invisible { visibility: hidden; }
+
+
+/* HEADINGS AND MENU ITEMS */
+.h-txt {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+}
