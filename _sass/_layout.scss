@@ -5,17 +5,55 @@
 .site-header {
   background-color: var(--black);
   color: var(--white);
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1030;
 }
 
 .wrapper--flex {
+  align-items: center;
   display: flex;
+}
+
+.wrapper--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.menu {
+  grid-column: 2 / -1;
+}
+
+.menu__items {
+  display: flex;
+  // justify-content: space-around;
 }
 
 .menu__item {
   list-style: none;
+
 }
 
 .menu__link {
-  text-decoration: none;
   color: inherit;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.logo--white {
+  border: 1px solid;
+  padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .site-header {
+    padding: 25px;
+  }
+
+  .menu__button {
+    display: none;
+  }
 }
