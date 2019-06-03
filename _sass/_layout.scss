@@ -6,6 +6,7 @@
   background-color: var(--black);
   color: var(--white);
   left: 0;
+  padding: 3vh;
   position: fixed;
   right: 0;
   z-index: 1030;
@@ -22,18 +23,26 @@
   place-items: center;
 }
 
+.logo--white {
+  color: inherit;
+}
+
+.logo__img {
+  border: 1px solid;
+  height: 8vh;
+  padding-left: 20px;
+}
+
 .menu {
   grid-column: 2 / -1;
 }
 
-.menu__items {
-  display: flex;
-  // justify-content: space-around;
-}
+// .menu__items {
+//
+// }
 
 .menu__item {
   list-style: none;
-
 }
 
 .menu__link {
@@ -43,15 +52,11 @@
   text-decoration: none;
 }
 
-.logo--white {
-  border: 1px solid;
-  padding-left: 20px;
-}
 
 @media (min-width: 768px) {
-  .site-header {
-    padding: 25px;
-  }
+  // .site-header {
+  //   padding: ;
+  // }
 
   .menu__button {
     display: none;
