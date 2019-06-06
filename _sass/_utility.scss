@@ -18,7 +18,13 @@
 
 /* HEADINGS AND MENU ITEMS */
 .h-txt {
-  font-family: var(--font-primary);
+  font-family: var(--font-nav);
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
