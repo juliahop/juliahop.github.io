@@ -72,6 +72,12 @@ p {
   list-style: none;
 }
 
+@media (max-width: 47.5em) {
+  .menu__item {
+    display: block;
+  }
+}
+
 .menu__link {
   color: inherit;
   letter-spacing: 2px;
@@ -111,7 +117,10 @@ p {
 }
 
 @media (max-width: 47.5em) {
-  max-width: 100%;
+  .home__content {
+    max-width: 100%;
+    padding: 0 3vh;
+  }
 }
 
 @media (min-width: 47.5em) {
@@ -135,6 +144,12 @@ p {
   grid-column: heading-start / heading-end;
   padding: 1em;
   text-align: center;
+}
+
+@media (max-width: 47.5em) {
+  .home__heading {
+    font-size: 2em;
+  }
 }
 
 .article {
