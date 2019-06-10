@@ -96,47 +96,22 @@ p {
 #HOME-SECTIONS
 \*------------------------------------------*/
 
-.home {
+.home { /* section */
   background-size: cover;
   height: 100vh;
-  padding-top: 14vh;
+  padding-top: 14vh; /* on scrol distance from header */
 }
 
 .home--1 {
   background-color: var(--color-1);
   display: grid;
-  height: 86vh;
+  height: 86vh; /* min header to calc center */
   padding-top: 0;
   place-items: center;
 }
 
-.home__content {
-  // padding: 0 20rem;
-  margin: 0 auto;
-  max-width: 70%;
-}
-
-@media (max-width: 47.5em) {
-  .home__content {
-    max-width: 100%;
-    padding: 0 3vh;
-  }
-}
-
-@media (min-width: 47.5em) {
-  .home--2 .home__content {
-    display: grid;
-    grid-column-gap: 10rem;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "heading heading heading"
-                         "article article article";
-  }
-}
-
-@media (max-width: 47.5em) {
-  .home--2 .home__content {
-    display: block;
-  }
+.home__container { /* div */
+  padding: 0 3vh;
 }
 
 .home__heading {
@@ -144,22 +119,37 @@ p {
   grid-column: heading-start / heading-end;
   padding: 1em;
   text-align: center;
+
+    @media (max-width: 47.5em) {
+      font-size: 2em;
+    }
 }
 
-@media (max-width: 47.5em) {
-  .home__heading {
-    font-size: 2em;
-  }
+.content--flex {
+  display: flex;
+  justify-content: center;
 }
+
 
 .article {
   text-align: center;
+  padding: 3rem;
+  border: 2px solid var(--color-1-dark);
+  width: 25%;
+  max-width: 400px;
+  flex: 1 0 350px;
+
+  &:nth-child(2) {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+  // min-width: 37rem;
 }
 
-.article::after {
-  content: "―";
-  color: var(--color-1-dark);
-}
+// .article::after {
+//   content: "―";
+//   color: var(--color-1-dark);
+// }
 
 .article__heading {
   color: var(--color-1-dark);
@@ -175,13 +165,14 @@ p {
 
 .article__icon {
   height: 8vh;
+  margin-bottom: 2rem;
 }
 
 .article__txt {
   line-height: 1.6;
-  margin: 2.5rem;
+  padding: 1.5rem;
 }
 
 .article__txt:last-child {
-  margin-bottom: 3rem;
+  // margin-bottom: 3rem;
 }
