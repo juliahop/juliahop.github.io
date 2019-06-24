@@ -64,10 +64,6 @@ p {
   grid-column: 2 / -1;
 }
 
-// .menu__items {
-//
-// }
-
 .menu__item {
   list-style: none;
 }
@@ -116,7 +112,6 @@ p {
 
 .home__heading {
   font-size: 2.5em;
-  grid-column: heading-start / heading-end;
   padding: 1em;
   text-align: center;
 
@@ -127,7 +122,11 @@ p {
 
 .content {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+
+  @media (min-width: 75em) {
+    justify-content: center;
+  }
 
   @media (max-width: 50em) {
     display: block;
@@ -137,26 +136,27 @@ p {
 
 
 .article {
-  text-align: center;
-  padding: 3rem;
   border: 2px solid var(--color-1-dark);
-  width: 25%;
+  flex: 1 1 350px;
   max-width: 400px;
-  flex: 1 0 350px;
+  padding: 3rem;
+  text-align: center;
+  // width: 25%;
 
-  &:nth-child(2) {
-    margin-left: 4rem;
-    margin-right: 4rem;
-
-    @media (max-width: 50em) {
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
+  // &:nth-child(2) {
+  //   margin-left: 4rem;
+  //   margin-right: 4rem;
+  //
+  //   @media (max-width: 50em) {
+  //     margin-left: 0;
+  //     margin-right: 0;
+  //   }
+  // }
 
   @media (max-width: 50em) {
     width: inherit;
-  } 
+    margin: 4rem auto;
+  }
 }
 
 // .article::after {
@@ -192,4 +192,61 @@ p {
 
 .article__txt:last-child {
   // margin-bottom: 3rem;
+}
+
+/* home--3 */
+.home--3 {
+  background-color: var(--color-2);
+}
+
+.home--3 .home__heading {
+  color: var(--white);
+}
+
+.home--3 .content {
+  flex-wrap: wrap;
+}
+
+/* portfolio */
+.portfolio-item {
+  flex: 1 0 350px;
+  // margin-right: 4rem;
+  margin-bottom: 4rem;
+  max-width: 400px;
+  // width: 25%;
+
+  @media (max-width: 50em) {
+    display: block;
+    margin: 4rem auto;
+  }
+}
+
+.portfolio-item__link {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.caption {
+  -moz-transition: all ease .5s;
+  -webkit-transition: all ease .5s;
+  background: rgba(255,132,124,.9);
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  transition: all ease .5s;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.caption__content {
+  font-size: 5em;
+  color: var(--white);
 }
