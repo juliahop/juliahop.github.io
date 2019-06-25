@@ -120,13 +120,12 @@ p {
   }
 }
 
+/*-----------------2-------------------------*/
 .content {
   display: flex;
-  justify-content: space-around;
-
-  @media (min-width: 75em) {
-    justify-content: center;
-  }
+  justify-content: center;
+  margin-bottom: 3em;
+  flex-wrap: wrap;
 
   @media (max-width: 50em) {
     display: block;
@@ -134,35 +133,19 @@ p {
   }
 }
 
-
 .article {
   border: 2px solid var(--color-1-dark);
   flex: 1 1 350px;
   max-width: 400px;
   padding: 3rem;
   text-align: center;
-  // width: 25%;
-
-  // &:nth-child(2) {
-  //   margin-left: 4rem;
-  //   margin-right: 4rem;
-  //
-  //   @media (max-width: 50em) {
-  //     margin-left: 0;
-  //     margin-right: 0;
-  //   }
-  // }
+  margin: 2rem;
 
   @media (max-width: 50em) {
     width: inherit;
     margin: 4rem auto;
   }
 }
-
-// .article::after {
-//   content: "―";
-//   color: var(--color-1-dark);
-// }
 
 .article__heading {
   color: var(--color-1-dark);
@@ -190,11 +173,7 @@ p {
   padding: 1.5rem;
 }
 
-.article__txt:last-child {
-  // margin-bottom: 3rem;
-}
-
-/* home--3 */
+/*-----------------3-------------------------*/
 .home--3 {
   background-color: var(--color-2);
 }
@@ -203,17 +182,10 @@ p {
   color: var(--white);
 }
 
-.home--3 .content {
-  flex-wrap: wrap;
-}
-
-/* portfolio */
 .portfolio-item {
-  flex: 1 0 350px;
-  // margin-right: 4rem;
-  margin-bottom: 4rem;
-  max-width: 400px;
-  // width: 25%;
+  flex: 1 0 95rem;
+  margin: 4rem;
+  max-width: 50rem; /* 400px */
 
   @media (max-width: 50em) {
     display: block;
@@ -223,9 +195,9 @@ p {
 
 .portfolio-item__link {
   display: block;
-  position: relative;
   margin: 0 auto;
   max-width: 400px;
+  position: relative;
 }
 
 .caption {
@@ -250,3 +222,5 @@ p {
   font-size: 5em;
   color: var(--white);
 }
+
+/*-----------------4-------------------------*/
