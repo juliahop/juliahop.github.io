@@ -94,14 +94,14 @@ p {
 
 .home { /* section */
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 14vh; /* on scrol distance from header */
 }
 
 .home--1 {
   background-color: var(--color-1);
   display: grid;
-  height: 86vh; /* min header to calc center */
+  min-height: 86vh; /* min header to calc center */
   padding-top: 0;
   place-items: center;
 }
