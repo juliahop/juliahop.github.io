@@ -315,7 +315,12 @@ a {
   right: 2%;
   cursor: pointer;
   z-index: 1049;
+}
 
+.visible-sm {
+  @media (min-width: 47.5em) {
+    display: none;
+  }
 }
 
 .scrol-top__btn {
