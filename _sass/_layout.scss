@@ -17,6 +17,10 @@ p {
 
 a {
   color: inherit;
+
+  &:hover, &:focus, &:active {
+    color: var(--color-2);
+  }
 }
 
 .content-container {
@@ -54,9 +58,12 @@ a {
   place-items: center;
 }
 
-// .logo--white {
-//   color: inherit;
-// }
+.logo {
+
+  &:hover {
+    color: var(--color-2);
+  }
+}
 
 .logo__img {
   border: 1px solid;
@@ -70,10 +77,8 @@ a {
 
 .menu__item {
   list-style: none;
-}
 
-@media (max-width: 47.5em) {
-  .menu__item {
+  @media (max-width: 47.5em) {
     display: block;
   }
 }
@@ -296,4 +301,44 @@ a {
   text-align: center;
   padding: 4rem 0;
   letter-spacing: 1px;
+}
+
+
+/*------------------------------------------*\
+#SCROLL-TO-TOP BUTTON
+\*------------------------------------------*/
+
+.scroll-top { /* div */
+  transition: all .25s ease-in-out;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  cursor: pointer;
+  z-index: 1049;
+
+}
+
+.scrol-top__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E8E8E8;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--color-3-dark);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  &:hover {
+    opacity: 1;
+    background-color: var(--color-2-dark);
+    color: var(--white);
+  }
+
+  // see _utility.scss for 'visible' and 'invisible' classes
+
+  &.visible {
+    opacity: 0.6;
+  }
 }
