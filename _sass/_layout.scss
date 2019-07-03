@@ -27,8 +27,9 @@ a {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 14vh;
+  // padding-top: 14vh;
   width: 100%;
+  background-color: var(--color-1);
 }
 
 
@@ -45,7 +46,23 @@ a {
   right: 0;
   width: 100%;
   z-index: 1030;
+  transition: all 400ms ease;
+
+  &.shrink {
+    padding: 1vh;
+    opacity: 0.9;
+  }
+
+  @media (min-width: 1900px) {
+    padding: 3.5vh;
+  }
 }
+
+// header {
+//   &.shrink {
+//     padding: 1vh;
+//   }
+// }
 
 .wrapper--flex {
   align-items: center;
@@ -59,6 +76,7 @@ a {
 }
 
 .logo {
+  height: 80%;
 
   &:hover {
     color: var(--color-2);
@@ -67,8 +85,9 @@ a {
 
 .logo__img {
   border: 1px solid;
-  height: 8vh;
+  // height: 8vh;
   padding-left: 20px;
+  height: 100%;
 }
 
 .menu {
@@ -108,11 +127,12 @@ a {
 }
 
 .home--1 {
-  background-color: var(--color-1);
+  // background-color: var(--color-1);
   display: grid;
   min-height: 86vh; /* min header to calc center */
   padding-top: 0;
   place-items: center;
+  margin-top: 14vh;
 }
 
 .home__container { /* div */
@@ -130,6 +150,12 @@ a {
 }
 
 /*-----------------2-------------------------*/
+.home--2,
+.home--4,
+.home--5 {
+  background-color: var(--white);
+}
+
 .content {
   display: flex;
   justify-content: center;

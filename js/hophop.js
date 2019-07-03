@@ -1,5 +1,8 @@
-// Scroll-to-top button fanction activates when document is loaded
-function activateScrollButton() {
+// Activates when document is loaded
+function activateScrollEvents() {
+
+// 1. SCROLL-TO-TOP BUTTON
+
   // Set a variable for the button
   const scrollToTopButton = document.getElementById("js-top");
 
@@ -37,4 +40,8 @@ function activateScrollButton() {
     e.preventDefault();
     scrollToTop();
   }
+
+
+  // window.addEventListener("scroll", scrollFunc);
+
 }
