@@ -41,7 +41,4 @@ function activateScrollEvents() {
     scrollToTop();
   }
 
-
-  // window.addEventListener("scroll", scrollFunc);
-
 }
