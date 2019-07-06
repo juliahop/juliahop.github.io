@@ -58,12 +58,6 @@ a {
   }
 }
 
-// header {
-//   &.shrink {
-//     padding: 1vh;
-//   }
-// }
-
 .wrapper--flex {
   align-items: center;
   display: flex;
@@ -96,19 +90,27 @@ a {
 
 .menu {
   grid-column: 2 / -1;
+
+  @media (max-width: 47.5em) {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+    padding: 3vh 0;
+    border-top: 1px solid var(--gray-2);
+  }
 }
 
 .menu__items {
-  // @media (max-width: 760px) {
-  //   display: none;
-  // }
+  @media (max-width: 47.5em) {
+    display: block;
+
+  }
 }
 
 .menu__item {
   list-style: none;
 
   @media (max-width: 47.5em) {
-    display: block;
+    padding: 2vh;
   }
 }
 
