@@ -3,19 +3,27 @@ function mobileMenu() {
   let mq = window.matchMedia("(max-width: 47.5em)");
   let menuItems = document.querySelector(".menu.wrapper--flex");
   let menuButton = document.querySelector(".menu__button");
+  let menuItem = document.querySelectorAll(".menu__item.h-txt.js-page-scroll");
 
   if (mq.matches) {
     menuItems.classList.add("hidden");
   };
 
   addListener(menuButton, 'click', function () {
-          menuItems.classList.toggle("hidden");
+      menuItems.classList.toggle("hidden");
   });
 
   addListener(menuButton, 'keyup', function(event) {
       if (event.keyCode == 13) {
               menuButton.click();
       }
+  });
+
+
+  menuItem.forEach(link => {
+    link.addEventListener('click', function () {
+      menuItems.classList.toggle("hidden");
+    });
   });
 
   addListener(window, 'resize', function () {
