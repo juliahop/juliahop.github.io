@@ -101,13 +101,18 @@ a {
 
 .menu__items {
   @media (max-width: 47.5em) {
-    display: block;
-
+    flex-direction: column;
+    align-items: stretch;
+    flex: 1 1 0;
   }
 }
 
 .menu__item {
   list-style: none;
+
+  &:hover, &:focus, &:active {
+    color: var(--color-2);
+  }
 
   @media (max-width: 47.5em) {
     padding: 2vh;
