@@ -19,12 +19,13 @@ function mobileMenu() {
       }
   });
 
-
-  menuItem.forEach(link => {
-    link.addEventListener('click', function () {
-      menuItems.classList.toggle("hidden");
+  if (mq.matches) {
+    menuItem.forEach(link => {
+      link.addEventListener('click', function () {
+        menuItems.classList.toggle("hidden");
+      })
     });
-  });
+  };
 
   addListener(window, 'resize', function () {
       var width = window.innerWidth ||

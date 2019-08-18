@@ -124,6 +124,10 @@ a {
   letter-spacing: 2px;
   padding: 10px 20px;
   text-decoration: none;
+
+  @media (max-width: 47.5em) {
+    display: block;
+    padding: 0;
 }
 
 .menu__button {
