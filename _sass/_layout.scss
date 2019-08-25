@@ -4,6 +4,11 @@
 
 html {
     font-size: 8px; /* Basis for rem units */
+    scroll-behavior: smooth;
+
+    @media (prefers-reduced-motion: reduce) {
+      scroll-behavior: auto;
+    }
 }
 
 body {
