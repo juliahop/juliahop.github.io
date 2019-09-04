@@ -4,6 +4,6 @@
   --font-sub-heading: 'Source Sans Pro', sans-serif;
 
   //borders
-  --border-thick: 2px solid;
-  --border-thin:  1px solid;
+  --border-thick: 2px solid var(--color-1-dark);
+  --border-thin:  1px solid #eee;
 }
