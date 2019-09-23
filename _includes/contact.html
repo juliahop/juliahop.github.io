@@ -1,29 +1,29 @@
-<form class="form single-txt" action="https://app.99inbound.com/api/e/bMrDCOUx" method="post" target="_blank">
+<form class="form single-txt" action="https://app.99inbound.com/api/e/bMrDCOUx" method="post" /* target="_blank" */>
   <!-- 99Inbound spam protection, a specific honepot field configuration in the application UI, designed to trick spambots into completing the form. -->
   <div style="position: absolute; left: -5000px;">
   <input type="checkbox" name="glazed_cyan_cracked_toad" value="1" tabindex="-1" autocomplete="no">
   </div>
   <!-- END -->
   <div class="form__field">
-    <label for="name">Uw naam</label>
-    <input class="input" id="name" type="text" name="name">
+    <label for="name">Uw naam<abbr title="Verplicht in te vullen veld">*</abbr></label>
+    <input class="input" id="name" type="text" name="name" required>
   </div>
 
   <div class="form__field">
-    <label for="email">E-mailadres</label>
-    <input class="input" id="email" type="email" name="email">
+    <label for="email">E-mailadres<abbr title="Verplicht in te vullen veld">*</abbr></label>
+    <input class="input" id="email" type="email" name="email" required>
   </div>
 
   <div class="form__field">
-    <label for="tel">Telefoonnummer</label>
+    <label for="tel">Telefoonnummer (optioneel)</label>
     <input class="input" id="tel" type="tel" name="tel">
   </div>
 
   <div class="form__field">
-    <label for="msg">Bericht</label>
-    <textarea class="input" id="msg" type="text" name="msg"></textarea>
+    <label for="msg">Bericht<abbr title="Verplicht in te vullen veld">*</abbr></label>
+    <textarea class="input" id="msg" type="text" name="msg" maxlength="140" required></textarea>
   </div>
 
-  <button class="btn" type="submit" name="btn">Verstuur</button>
+  <button class="btn" type="submit" name="btn" disabled>Verstuur</button>
 
 </form>

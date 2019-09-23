@@ -383,6 +383,10 @@ label {
   font-family: var(--font-nav);
 }
 
+abbr[title] {
+  text-decoration: none;
+}
+
 .form__field {
   padding: 2em 0;
   display: flex;
@@ -403,6 +407,10 @@ label {
     border-bottom: var(--border-thick);
     outline: 0;
   }
+
+  &[required]:valid {
+    border-bottom: var(--border-thick-green);
+  }
 }
 
 textarea {
@@ -411,7 +419,7 @@ textarea {
   overflow: auto;
 }
 
-.btn {
+button {
   font-size: 3rem;
   letter-spacing: 1px;
   padding: 1em;
@@ -421,11 +429,17 @@ textarea {
   -webkit-box-shadow: inset 0 -2px #e57b70;
   box-shadow: inset 0 -2px #e57b70;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .25);
-  background-color: #ee8176;
+  background-color: var(--color-1-light);
 
   &:hover,
   &:focus,
   &:active {
     background-color: var(--color-1-dark);
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    cursor: not-allowed;
+    background-color: var(--color-1-light);
   }
 }
