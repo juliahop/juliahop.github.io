@@ -443,3 +443,24 @@ button {
     background-color: var(--color-1-light);
   }
 }
+
+/*------------------------------------------*\
+#PORTFOLIO MODAL
+\*------------------------------------------*/
+
+.portfolio-modal {
+  position: fixed;
+  z-index: 1110;
+  top: 2em;
+  bottom: 2em;
+  left: 2em;
+  right: 2em;
+  background: white;
+  box-shadow: 0 0 0 5em rgba(black, .5);
+
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+}
