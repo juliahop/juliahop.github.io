@@ -3,15 +3,15 @@ layout: default
 ---
 <!-- Hero -->
 <section class="home home--1">
-  <div class="home__container">
+  <div class="container">
     <img class="img-responsive" src="img/profile3.png" alt="HopHop Webdesign">
   </div>
 </section>
 
 <!-- Diensten -->
 <section id="diensten" class="home home--2">
-  <div class="home__container">
-    <h2 class="home__heading h-txt">Diensten</h2>
+  <div class="container">
+    <h2 class="title">Diensten</h2>
 
     <div class="content">
 
@@ -44,82 +44,16 @@ layout: default
 
 <!-- Portfolio -->
 <section id="portfolio" class="home home--3">
-  <div class="home__container">
-    <h2 class="home__heading h-txt">Portfolio</h2>
-
-    <div class="content portfolio-items">
-      <!-- Portfolio item 1 -->
-      <div class="portfolio-item">
-        <a href="#portfolioModal1" class="portfolio-item__link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption__content">
-              <i class="fas fa-search-plus"></i>
-            </div>
-          </div>
-          <img src="img/portfolio/portfolio1.png" class="img-responsive" alt="RSI-Vereniging">
-        </a>
-
-        <!-- Portfolio modal 1 -->
-        <div class="portfolio-modal" id="portfolioModal1">
-          <button class="modal-close">
-            <i class="far fa-times-circle"></i>
-          </button>
-          <div class="portfolio-header">
-            <div class="portfolio-title-box">
-              <h2 class="portfolio-title">Project Name</h2>
-              <p class="portfolio-subtitle">Subtitle goes here</p>
-            </div>
-          </div>
-          <div class="portfolio-content">
-            <p>The content goes here</p>
-            <img src="img/portfolio/portfolio1.png" class="img-responsive" alt="RSI-Vereniging">
-          </div>
-        </div>
-
-
-      </div><!-- End portfolio item -->
-
-      <div class="portfolio-item">
-        <a href="#" class="portfolio-item__link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption__content">
-              <i class="fas fa-search-plus"></i>
-            </div>
-          </div>
-          <img src="img/portfolio/portfolio2.png" class="img-responsive" alt="HopHop Webdesign">
-        </a>
-      </div>
-
-      <div class="portfolio-item">
-        <a href="#" class="portfolio-item__link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption__content">
-              <i class="fas fa-search-plus"></i>
-            </div>
-          </div>
-          <img src="img/portfolio/portfolio42.png" class="img-responsive" alt="RSI-Vereniging">
-        </a>
-      </div>
-
-      <div class="portfolio-item">
-        <a href="#" class="portfolio-item__link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption__content">
-              <i class="fas fa-search-plus"></i>
-            </div>
-          </div>
-          <img src="img/portfolio/portfolio39.1.png" class="img-responsive" alt="Homeopathie Apeldoorn">
-        </a>
-      </div>
-
-    </div>
+  <div class="container">
+    <h2 class="title title--white">Portfolio</h2>
+    {% include portfolio.html %}
   </div>
 </section>
 
 <!-- Over -->
 <section id="over" class="home home--4">
-  <div class="home__container">
-    <h2 class="home__heading h-txt">Over mij</h2>
+  <div class="container">
+    <h2 class="title">Over mij</h2>
     <div class="content">
 
       <img class="face" alt="julia hop" src="img/face1.jpg">
@@ -137,8 +71,8 @@ layout: default
 
 <!-- Contact -->
 <section id="contact" class="home home--5">
-  <div class="home__container">
-    <h2 class="home__heading h-txt">Neem contact met mij op</h2>
+  <div class="container">
+    <h2 class="title">Neem contact met mij op</h2>
     <div class="content">
       {% include contact.html %}
     </div>
