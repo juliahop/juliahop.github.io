@@ -484,12 +484,13 @@ textarea {
 
 .modal-close {
   position: fixed;
-  left: 1.5em;
-  top: 1.5em;
+  left: 1em;
+  top: 1em;
   cursor: pointer;
   font-size: 4rem;
   border: 0;
   color: var(--color-1-edge);
+  background-color: white;
 }
 
 .title--modal {
