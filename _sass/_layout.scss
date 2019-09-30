@@ -123,11 +123,13 @@ li {
 .menu {
   grid-column: 2 / -1;
 
+
   @media (max-width: 47.5em) {
     grid-column: 1 / -1;
     justify-self: stretch;
     padding: 3vh 0;
     border-top: 1px solid var(--gray-2);
+    
   }
 }
 
@@ -150,10 +152,6 @@ li {
   &:hover, &:focus, &:active {
     color: var(--color-2);
   }
-
-  // @media (max-width: 47.5em) {
-  //   padding: 3vh;
-  // }
 }
 
 .menu__link {

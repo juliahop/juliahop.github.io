@@ -1,7 +1,7 @@
 function mobileMenu() {
 
   const mq = window.matchMedia("(max-width: 47.5em)");
-  const menuItems = document.querySelector(".menu.wrapper--flex");
+  const menuItems = document.querySelector(".menu");
   const menuButton = document.querySelector(".menu__button");
 
   function addListener(element, type, callback) {
@@ -11,6 +11,10 @@ function mobileMenu() {
             element.attachEvent('on' + type, callback);
         };
     };
+
+  if(mq.matches) {
+    menuItems.classList.add('hidden');
+  }
 
 // Hide menu on item click
   addListener(menuItems, 'click', e => {
@@ -34,14 +38,14 @@ function mobileMenu() {
   // });
 
   // Hide menu items on smaller screens
-  addListener(window, 'resize', () => {
-      let width = window.innerWidth ||
-                document.documentElement.clientWidth ||
-                document.body.clientWidth;
-
-        if (width < 760) {
-          menuItems.classList.add('hidden');
-        }
-  });
+  // addListener(window, 'resize', () => {
+  //     let width = window.innerWidth ||
+  //               document.documentElement.clientWidth ||
+  //               document.body.clientWidth;
+  //
+  //       if (width < 760) {
+  //         menuItems.classList.add('hidden');
+  //       }
+  // });
 
 };
