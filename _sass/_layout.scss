@@ -132,6 +132,8 @@ li {
 }
 
 .menu__items {
+  display: flex;
+
   @media (max-width: 47.5em) {
     flex-direction: column;
     align-items: stretch;
@@ -149,9 +151,9 @@ li {
     color: var(--color-2);
   }
 
-  @media (max-width: 47.5em) {
-    padding: 3vh;
-  }
+  // @media (max-width: 47.5em) {
+  //   padding: 3vh;
+  // }
 }
 
 .menu__link {
@@ -162,7 +164,7 @@ li {
 
   @media (max-width: 47.5em) {
     display: block;
-    padding: 0;
+    padding: 3vh;
   }
 }
 

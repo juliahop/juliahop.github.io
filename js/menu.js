@@ -3,46 +3,45 @@ function mobileMenu() {
   const mq = window.matchMedia("(max-width: 47.5em)");
   const menuItems = document.querySelector(".menu.wrapper--flex");
   const menuButton = document.querySelector(".menu__button");
-  const menuItem = document.querySelectorAll(".menu__link");
-
-
-  if (mq.matches) {
-    menuItems.classList.add("hidden");
-    menuItem.forEach(link => {
-      link.addEventListener('click', function () {
-        menuItems.classList.toggle("hidden");
-      })
-    })
-  };
-
-  addListener(menuButton, 'click', function () {
-      menuItems.classList.toggle("hidden");
-  });
-
-  addListener(menuButton, 'keyup', function(event) {
-      if (event.keyCode == 13) {
-              menuButton.click();
-      }
-  });
-
-  addListener(window, 'resize', function () {
-      var width = window.innerWidth ||
-                document.documentElement.clientWidth ||
-                document.body.clientWidth;
-
-      if (width > 760) {
-          menuItems.classList.remove("hidden");
-      } else {
-          menuItems.classList.add("hidden");
-      }
-  });
 
   function addListener(element, type, callback) {
         if (element.addEventListener) {
             element.addEventListener(type, callback);
         } else if (element.attachEvent) {
             element.attachEvent('on' + type, callback);
-        }
+        };
+    };
+
+// Hide menu on item click
+  addListener(menuItems, 'click', e => {
+    // e.preventDefault();
+    if(mq.matches) {
+      menuItems.classList.add('hidden');
+    } else {
+      return;
     }
+  });
+
+// Use menu button to open and close menu
+  addListener(menuButton, 'click', () => {
+      menuItems.classList.toggle("hidden");
+  });
+
+  // addListener(menuButton, 'keyup', e => {
+  //     if (e.keyCode == 13) {
+  //             menuButton.click();
+  //     }
+  // });
+
+  // Hide menu items on smaller screens
+  addListener(window, 'resize', () => {
+      let width = window.innerWidth ||
+                document.documentElement.clientWidth ||
+                document.body.clientWidth;
+
+        if (width < 760) {
+          menuItems.classList.add('hidden');
+        }
+  });
 
 };
