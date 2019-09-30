@@ -31,21 +31,23 @@ function mobileMenu() {
       menuItems.classList.toggle("hidden");
   });
 
-  // addListener(menuButton, 'keyup', e => {
-  //     if (e.keyCode == 13) {
-  //             menuButton.click();
-  //     }
-  // });
+  addListener(menuButton, 'keyup', e => {
+      if (e.keyCode == 13) {
+              menuButton.click();
+      }
+  });
 
-  // Hide menu items on smaller screens
-  // addListener(window, 'resize', () => {
-  //     let width = window.innerWidth ||
-  //               document.documentElement.clientWidth ||
-  //               document.body.clientWidth;
-  //
-  //       if (width < 760) {
-  //         menuItems.classList.add('hidden');
-  //       }
-  // });
+  // Hide menu items on smaller screens when resizing browser
+  addListener(window, 'resize', () => {
+      let width = window.innerWidth ||
+                document.documentElement.clientWidth ||
+                document.body.clientWidth;
+
+        if (width > 760) {
+          menuItems.classList.remove('hidden');
+        } else {
+          menuItems.classList.add('hidden');
+        };
+  });
 
 };
