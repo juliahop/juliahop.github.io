@@ -522,6 +522,7 @@ span {
 .modal__img-container {
   display: flex;
   flex-wrap: wrap;
+  flex-shrink: 0; //Safari!
   justify-content: center;
   align-items: start;
 
