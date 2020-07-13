@@ -1,8 +1,14 @@
 function mobileMenu() {
 
   const mq = window.matchMedia("(max-width: 47.5em)");
-  const menuItems = document.querySelector(".menu");
+  const menu = document.querySelector(".menu");
   const menuButton = document.querySelector(".menu__button");
+  const menuItems = menu.querySelectorAll(".menu__link");
+
+
+  
+
+  console.log(menuItems);
 
   function addListener(element, type, callback) {
         if (element.addEventListener) {
@@ -13,14 +19,22 @@ function mobileMenu() {
     };
 
   if(mq.matches) {
-    menuItems.classList.add('hidden');
+    menu.classList.add('hidden');
   }
 
+  // Add current class to menu link
+  menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      menuItems.forEach(link => link.classList.remove('current'));
+      item.classList.add('current');
+    });
+  });
+
 // Hide menu on item click
-  addListener(menuItems, 'click', e => {
+  addListener(menu, 'click', e => {
     // e.preventDefault();
     if(mq.matches) {
-      menuItems.classList.add('hidden');
+      menu.classList.add('hidden');
     } else {
       return;
     }
@@ -28,7 +42,7 @@ function mobileMenu() {
 
 // Use menu button to open and close menu
   addListener(menuButton, 'click', () => {
-      menuItems.classList.toggle("hidden");
+      menu.classList.toggle("hidden");
   });
 
   addListener(menuButton, 'keyup', e => {
@@ -44,9 +58,9 @@ function mobileMenu() {
                 document.body.clientWidth;
 
         if (width > 760) {
-          menuItems.classList.remove('hidden');
+          menu.classList.remove('hidden');
         } else {
-          menuItems.classList.add('hidden');
+          menu.classList.add('hidden');
         };
   });
 

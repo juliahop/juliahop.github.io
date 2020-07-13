@@ -23,9 +23,9 @@ p {
 a {
   color: inherit;
 
-  &:hover, &:focus, &:active {
-    color: var(--color-2);
-  }
+  // &:hover, &:focus, &:active {
+  //   color: var(--color-2);
+  // }
 }
 
 li {
@@ -56,7 +56,7 @@ li {
   min-height: 100vh;
   // padding-top: 14vh;
   width: 100%;
-  background-color: var(--color-1);
+  background-color: var(--color-2-dark);
 }
 
 .container { /* per section */
@@ -69,7 +69,7 @@ li {
 \*------------------------------------------*/
 
 .site-header {
-  background-color: var(--black);
+  background-color: var(--color-2-dark);
   color: var(--white);
   left: 0;
   padding: 3vh 4vh;
@@ -82,6 +82,7 @@ li {
   &.shrink {
     padding: 0 4vh;
     opacity: 0.9;
+    background-color: var(--color-2-darkest);
   }
 
   @media (min-width: 1900px) {
@@ -146,12 +147,15 @@ li {
 .menu__item {
   // list-style: none;
   font-family: var(--font-nav);
-  font-weight: 700;
-  text-transform: uppercase;
+  // font-weight: 700;
+  text-transform: lowercase;
+  font-size: 2.8rem;
 
-  &:hover, &:focus, &:active {
-    color: var(--color-2);
-  }
+  // &:hover, &:focus, &:active {
+  //   color: var(--color-2);
+  // }
+
+  
 }
 
 .menu__link {
@@ -160,10 +164,22 @@ li {
   padding: 10px 20px;
   text-decoration: none;
 
+  &:hover, &:focus {
+    border-bottom: 2px solid;
+  }
+
+  &:active {
+    color: var(--color-1);
+  }
+
   @media (max-width: 47.5em) {
     display: block;
     padding: 3vh;
   }
+}
+
+.current {
+  color: var(--color-1);
 }
 
 .menu__button {
