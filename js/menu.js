@@ -3,7 +3,8 @@ function mobileMenu() {
   const mq = window.matchMedia("(max-width: 47.5em)");
   const menu = document.querySelector(".menu");
   const menuButton = document.querySelector(".menu__button");
-  
+  const menuItems = menu.querySelectorAll(".menu__link");  
+  const linkToTop = document.querySelector(".logo");
 
   function addListener(element, type, callback) {
         if (element.addEventListener) {
@@ -13,17 +14,28 @@ function mobileMenu() {
         };
     };
 
+  // uses HTML5 history API to manipulate the location bar
+  function removeHash() {
+    // set a short timeout before taking action
+    // so as to allow hash to be set
+    setTimeout(() => {
+      history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
+    }, 5); // 5 miliseconds   
+  };
+
+
+  menuItems.forEach(item => {
+    item.addEventListener('click', removeHash);
+  });
+  
+  addListener(linkToTop, 'click', removeHash);
+
+
   if(mq.matches) {
     menu.classList.add('hidden');
   }
 
-  // Add current class to menu link
-  // menuItems.forEach(item => {
-  //   item.addEventListener('click', () => {
-  //     menuItems.forEach(link => link.classList.remove('current'));
-  //     item.classList.add('current');
-  //   });
-  // });
+  
 
 // Hide menu on item click
   addListener(menu, 'click', e => {
