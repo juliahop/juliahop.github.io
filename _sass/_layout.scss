@@ -504,6 +504,10 @@ textarea {
       align-items: center;
     }
   }
+
+  & article {
+    max-width: 600px;
+  }
 }
 
 .modal-close {
@@ -529,7 +533,7 @@ textarea {
   font-family: var(--font-nav);
 
   & li {
-    padding: .5rem;
+    padding: 1rem;
     color: var(--color-text);
   }
 }
@@ -544,12 +548,22 @@ span {
   flex-wrap: wrap;
   flex-shrink: 0; //Safari!
   justify-content: center;
-  align-items: start;
-
+  align-items: center;
+  
+  margin-bottom: 5rem;
 
   & img {
     padding: 4rem;
+    border: 2px solid var(--color-1-dark);
     // max-width: 480px;
+    
+    &:first-child {
+      margin-bottom: 1.5rem;
 
+      @media (min-width: 1440px) {
+        margin-right: 1rem;
+      }  
+    
+    }
   }
 }
