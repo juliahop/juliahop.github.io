@@ -553,9 +553,13 @@ span {
   margin-bottom: 5rem;
 
   & img {
-    padding: 4rem;
+    
     border: 2px solid var(--color-1-dark);
-    max-width: 600px;
+
+    @media (min-width: 768px) {
+      max-width: 600px;
+      padding: 4rem;
+    }     
     
     &:first-child {
       margin-bottom: 1.5rem;
