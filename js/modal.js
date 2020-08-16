@@ -11,9 +11,11 @@ portfolioContainer.addEventListener('click', e => {
   const closeButton = modal.querySelector('.modal-close');
 
   modal.classList.add('is-open');
+  modal.scrollTo(0,0);
 
   closeButton.addEventListener('click', _ => {
     modal.classList.remove('is-open');
+    
   })
 
 })
