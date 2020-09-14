@@ -102,11 +102,15 @@ li {
 }
 
 .logo {
-  width: 10rem;
+  width: 8rem;
   display: block;
 
   @media (max-width: 760px) {
     justify-self: start;
+  }
+
+  @media (min-width: 1024px) {
+    width: 10rem;
   }
 }
 
